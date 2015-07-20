@@ -5,15 +5,25 @@
 	    <form name="form" role="form" novalidate class="simple-form">
 	        <div class="form-group">
 	            <label for="username">Username</label>
+                <!-- Il contenuto del tag input verrà assegnato alla variabile nel model user.username-->
 	            <input type="text" name="username" id="username" class="form-control" ng-model="user.username" required />
 	            <!--<span ng-show="form.username.$dirty && form.username.$error.required" class="help-block">Username is required</span>-->
 	        </div>
 	        <div class="form-group">
 	            <label for="password">Password</label>
+                <!-- Il contenuto del tag input verrà assegnato alla variabile nel model user.password-->
 	            <input type="password" name="password" id="password" class="form-control" ng-model="user.password" required />
 	            <!--<span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">Password is required</span>-->
 	        </div>
 	        <div class="form-actions">
+                <!--
+                al click, intercettato da ng-click, viene eseguito il metodo login() presente nello $scope
+                 NB user sarà un oggetto con quest forma
+                 user ={
+                    username : valoreUsernameInserito,
+                    password : valorePasswordInserita
+                 }
+                -->
 	            <button type="submit" class="btn btn-primary" ng-click="login(user)">Login</button>
 	        </div>
 	    </form>

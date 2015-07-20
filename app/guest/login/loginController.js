@@ -1,8 +1,13 @@
 'use strict';
 
-angular.module('loginModule')
+angular.module('loginModule')//NEL MODULO loginModule (NB non lo sto istanziando, ma ci sto dichiarando un controller)
+    /*
+    SINTASSI
+    .controller('nomeController', ['dipendenza1', ..., 'dipendenzaN', function(dipendenza1, ..., dipendenzaN){}]
+     */
     .controller('loginController', [ '$scope', 'guestService', '$location', function ($scope, guestService, $location) {
 
+        //dichiaro una funzione e la assegno allo scope, in questo modo sarà richiamabile dal template!
         $scope.login = function(user)
         {
             //alert(angular.toJson(user, true));

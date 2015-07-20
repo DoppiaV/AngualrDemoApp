@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<!-- Entry point per inizializzare l'applicazione di angularJS -->
+<html lang="en" ng-app="myApp" class="no-js">
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,24 +14,22 @@
   <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
-  <!--.<ul class="menu">
-    <li><a href="#/view1">view1</a></li>
-    <li><a href="#/view2">view2</a></li>
-  </ul>-->
 
-  <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-  <![endif]-->
-
+  <!-- View principale che verrà sostituita impostata nei file di routing dell'applicazione-->
   <div ng-view></div>
 
-  <!--<div>Angular seed app: v<span app-version></span></div>-->
-
-  <!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
-  -->
+  <!-- file js di libreria - start-->
+  <!-- rende disponibile 'angular' all'interno dell'applicazione -->
   <script src="bower_components/angular/angular.js"></script>
+  <!-- serve per poter utilizzare il routing fornito da ngRoute -->
   <script src="bower_components/angular-route/angular-route.js"></script>
+  <!-- file js di libreria - end-->
+
+  <!--
+        File JS della nostra applicazione demo
+        NB non è importante nè l'ordine in cui vengono inclusi nè la struttura gerarchica data alle cartelle del filesystem,
+            si ha la massima libertà su come organizzare questa struttura come si vuole
+  -->
   <script src="app.js"></script>
   <script src="guest/login/loginConfig.js"></script>
   <script src="guest/login/loginController.js"></script>
